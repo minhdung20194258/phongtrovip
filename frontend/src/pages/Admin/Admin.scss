@@ -1,0 +1,43 @@
+.App-AdminContent {
+  position: relative;
+  background-color: white;
+  padding-top: 0;
+  flex: 1;
+  height: calc(100vh - $height-navbar-view);
+  overflow-y: auto;
+
+  .AdminContent__Filter {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    position: sticky;
+    padding-top: 32px;
+    padding-bottom: 12px;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+  }
+
+  .AdminContentForm {
+    #AdminContentForm-Image {
+      display: none;
+    }
+    #AdminContentForm-Image + label {
+      max-width: 360px;
+    }
+    img {
+      border-radius: 8px;
+      width: 280px;
+      object-fit: cover;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.App-AdminAccount.App-AdminContent {
+  img {
+    max-width: 120px;
+    max-height: 120px;
+  }
+}

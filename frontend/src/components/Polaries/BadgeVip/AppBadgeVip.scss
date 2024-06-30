@@ -1,0 +1,59 @@
+.App-BadgeVip {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.App-BadgeVip__VIPStar--Slash1 {
+  width: 8px;
+  height: 60px;
+  position: absolute;
+  bottom: -12px;
+  left: 54px;
+  z-index: -1;
+  background-color: rgb(42, 42, 58);
+  transform: rotate(20deg);
+}
+
+.App-BadgeVip__VIPStar--Slash2 {
+  width: 4px;
+  height: 60px;
+  position: absolute;
+  bottom: -12px;
+  left: 62px;
+  z-index: 1;
+  background-color: rgb(207, 125, 78);
+  transform: rotate(20deg);
+}
+
+.App-BadgeVip__VIPStar {
+  height: 28px;
+  padding-right: 4px;
+  padding-left: 8px;
+  z-index: 2;
+  align-items: center;
+  display: flex;
+  background-color: black;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  color: white;
+
+  svg {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+}
+.App-BadgeVip__Discount {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 28px;
+  padding-right: 8px;
+  padding-left: 8px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(90deg, rgb(231, 172, 140) 0%, rgb(207, 125, 78) 100%);
+}

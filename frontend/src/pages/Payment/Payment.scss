@@ -1,0 +1,9 @@
+.App-Payment {
+  width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .App-Payment {
+    width: 100%;
+  }
+}

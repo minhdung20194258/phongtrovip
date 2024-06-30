@@ -1,0 +1,122 @@
+.App-Chat {
+  margin: 24px 120px;
+  display: flex;
+  height: calc(100% - 48px);
+  gap: 20px;
+
+  .App-Card {
+    min-width: 370px;
+  }
+}
+
+.App-ChatList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.App-ChatMessage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+
+  .ChatPreview__Image {
+    display: flex;
+    flex: 1;
+    border: 1px solid $color-border;
+    padding: 8px;
+    border-radius: 12px;
+    align-items: center;
+    gap: 12px;
+    button {
+      top: 0;
+      right: 0;
+    }
+
+    img {
+      max-height: 200px;
+    }
+  }
+
+  .ChatMessage__ListMessage {
+    display: flex;
+    flex-direction: column-reverse;
+    max-height: calc(100% - 44px);
+    margin-bottom: 16px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      background-color: transparent;
+    }
+  }
+
+  .ChatMessageText {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1px;
+    min-width: 35px;
+    align-items: end;
+    gap: 4px;
+
+    &.ChatMessageText--MySender {
+      flex-direction: row-reverse;
+      justify-content: end;
+      > div {
+        background-color: $color-500;
+      }
+    }
+
+    > div {
+      max-width: 560px;
+      padding: 8px 12px;
+      border-radius: 16px;
+      background-color: #303030;
+      color: #ffffff;
+      word-wrap: break-word;
+    }
+
+    > p {
+      font-size: 10px;
+      color: $color-grey-500;
+    }
+
+    .ChatMessageText__Image {
+      padding: 8px;
+      img {
+        max-height: 200px;
+      }
+    }
+  }
+}
+
+.App-ChatRoom {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  height: 72px;
+  border-radius: 8px;
+  padding: 4px 12px;
+  gap: 12px;
+
+  img {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+  &:hover,
+  &.active {
+    background-color: $color-100;
+  }
+
+  .ChatRoom__Info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 0;
+  }
+}

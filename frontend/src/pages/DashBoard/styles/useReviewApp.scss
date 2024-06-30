@@ -1,0 +1,14 @@
+.App-UseReviewApp {
+  .modal-content {
+    min-width: 600px;
+  }
+  .ReviewInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  textarea {
+    height: 300px;
+  }
+}

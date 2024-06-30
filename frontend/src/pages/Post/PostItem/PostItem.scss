@@ -1,0 +1,136 @@
+.App-PostItem {
+  display: flex;
+  //width: 820px;
+  width: 100%;
+  min-height: 230px;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow:
+      rgba(0, 0, 0, 0.075) 0 1px 1px inset,
+      #9cb5ff 0 0 6px;
+  }
+
+  .PostItem__Image {
+    width: 280px;
+    flex-shrink: 0;
+  }
+
+  .PostItem__Image--Small {
+    width: 70px;
+    height: 40px;
+
+    &.More {
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .PostItem__Image--Main {
+    width: 100%;
+    min-height: 186px;
+    flex-shrink: 0;
+  }
+
+  .PostItem__Image--Preview {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .PostItem__Description {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  .PostItem__Description--Review {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 160px;
+    flex-shrink: 0;
+  }
+
+  .PostItem__Description--Preview__Reaction {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: end;
+    align-items: end;
+    z-index: 1;
+  }
+
+  .PostItem__Description--Preview__Btn {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .PostItem__Description--Info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-PostItem {
+    flex-wrap: wrap;
+    width: 100%;
+
+    .PostItem__Image {
+      width: 100%;
+    }
+
+    .PostItem__Image--Small {
+      //width: 80px;
+      //height: 48px;
+      width: 100px;
+      height: 60px;
+    }
+
+    .PostItem__Image--Main {
+      height: 288px;
+    }
+
+    .PostItem__Image--Preview {
+      justify-content: start;
+    }
+
+    .PostItem__Description {
+      flex-wrap: wrap;
+    }
+    .PostItem__Description--Review {
+      width: 100%;
+    }
+    .PostItem__Description--Preview__Reaction {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: start;
+      height: 52px;
+      padding: 8px 0;
+
+      > div {
+        &:nth-child(2) {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .PostItem__Description--Preview__Btn {
+      flex-direction: row;
+    }
+  }
+}

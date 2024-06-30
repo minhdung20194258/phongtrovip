@@ -1,0 +1,92 @@
+@import 'react-image-gallery/styles/scss/image-gallery.scss';
+@import url('./bootstrap/index.scss');
+@import url('./base/base.scss');
+@import url('./general/AuthPage.scss');
+@import url('./general/NavLink.scss');
+
+* {
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.wmde-markdown {
+  display: grid;
+  width: auto;
+  min-width: 0px;
+  img {
+    margin: 1rem 0;
+  }
+  code {
+    margin-top: 0;
+    overflow: auto;
+    max-height: 600px;
+  }
+  color: black;
+  background-color: white;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+svg {
+  font-size: 20px;
+  flex-shrink: 0;
+  padding: 2px;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../font/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../font/OpenSans-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../font/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../font/OpenSans-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../font/OpenSans-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../font/OpenSans-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../font/OpenSans-ExtraBold.ttf);
+  font-weight: 800;
+}

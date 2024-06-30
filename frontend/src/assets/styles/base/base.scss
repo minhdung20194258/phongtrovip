@@ -1,0 +1,27 @@
+.NavLink {
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: $color-500;
+  &.lg {
+    font-size: 17px;
+  }
+  &.sm {
+    font-size: 11px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active,
+  &.active {
+    text-decoration: underline;
+    color: $color-700;
+  }
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}

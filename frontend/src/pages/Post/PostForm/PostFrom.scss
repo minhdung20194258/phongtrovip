@@ -1,0 +1,152 @@
+.App-PostNew {
+  position: relative;
+  margin-top: 130px;
+}
+
+.EditForm {
+  .PostForm__ContentLayout {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 24px 0;
+
+    .Content__Main {
+      width: 100%;
+    }
+  }
+  .Container__Header {
+    right: 240px;
+  }
+}
+
+.PostForm-ProcessBar {
+  position: fixed;
+  top: $height-navbar-view;
+  background-color: white;
+  z-index: 1;
+  padding: 24px 0 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+  width: calc(100vw - 48px);
+  margin: 0 20px 24px 20px;
+}
+
+.PostForm__ContentLayout {
+  display: flex;
+  width: 100%;
+  padding: 0 120px 24px 120px;
+  box-sizing: border-box;
+  position: relative;
+  //height: 100%;
+  overflow-y: auto;
+  gap: 16px;
+
+  &.Step3 {
+    flex-direction: column;
+  }
+
+  .Content__Sidebar {
+    width: 33.333333333333%;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: $color-grey-100;
+    border-radius: 16px;
+    position: sticky;
+    top: 0;
+    height: 100%;
+  }
+
+  .Content__Main {
+    display: flex;
+    flex-direction: column;
+    width: 66.66666666666%;
+    gap: 20px;
+  }
+
+  .Content__Main--Container {
+    width: 50%;
+
+    textarea {
+      height: 370px;
+    }
+  }
+}
+
+.ContentStep1-Image {
+  width: 400px;
+  height: 300px;
+  background-image: url('/posts/contract_terms_conditions.png');
+  background-size: auto 300px;
+  background-repeat: no-repeat;
+}
+
+.ContentStep2 {
+  margin-bottom: 64px;
+
+  input[type='file'] {
+    display: none;
+  }
+
+  .ContentStep2-InputImage {
+    display: flex;
+    border-radius: 8px;
+    border: 1px dashed $color-500;
+    height: 370px;
+  }
+
+  .ContentStep2-InputImage__Dummy {
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+  }
+  .ContentStep2-ImageGallery {
+    .image-gallery-svg {
+      height: 36px;
+    }
+    &:not(:has(.fullscreen)) {
+      .image-gallery-content .image-gallery-slide .image-gallery-image {
+        max-height: 300px;
+        height: 300px;
+      }
+    }
+    .image-gallery-content .image-gallery-slide .image-gallery-image {
+      max-height: calc(100vh - 240px);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-PostNew {
+    .PostForm__ContentLayout {
+      padding: 0 12px;
+      flex-wrap: wrap;
+      .Content__Sidebar,
+      .Content__Main,
+      .Content__Main--Container {
+        width: 100%;
+      }
+
+      .Content__Sidebar {
+        position: relative;
+        height: auto;
+
+        .btn:last-of-type {
+          position: sticky;
+          top: 0;
+        }
+      }
+    }
+
+    .ContentStep1-Image {
+      width: 100%;
+      background-size: auto 240px;
+    }
+
+    .PostForm-ProcessBar {
+      width: calc(100vw - 8px);
+      margin: 0 4px 24px 4px;
+    }
+  }
+}

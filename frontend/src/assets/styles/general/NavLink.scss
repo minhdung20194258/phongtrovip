@@ -1,0 +1,43 @@
+.App-LinkBtn {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: unset;
+  text-decoration: none;
+  font-weight: 500;
+  color: $color-txt;
+  height: $height-item;
+  width: 100%;
+
+  ~ .App-LinkBtn {
+    margin-top: 8px;
+  }
+
+  &:has(svg) {
+    padding-left: 8px;
+
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  &.active {
+    background-color: $color-200;
+  }
+
+  &:focus-visible:not(:disabled):not(.active) {
+    outline: 2px solid $color-200;
+  }
+  &:hover:not(:disabled):not(.active) {
+    background-color: $color-grey-200;
+  }
+  &:active:not(:disabled):not(.active) {
+    background-color: $color-grey-300;
+    border: unset;
+  }
+  &:disabled {
+    background-color: $color-grey-50;
+  }
+}

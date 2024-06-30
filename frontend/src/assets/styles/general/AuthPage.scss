@@ -1,0 +1,17 @@
+.App-AuthPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AuthPage__Card {
+  position: relative;
+  width: 500px;
+}
+
+@media only screen and (max-width: 767px) {
+  .AuthPage__Card {
+    box-shadow: none;
+    width: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+.App-CustomerReviewItem {
+  display: flex;
+  gap: 16px;
+  width: 500px;
+  height: 240px;
+  flex-shrink: 0;
+
+  .CustomerReviewItem__SenderInfo {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    img {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+    }
+    div {
+      font-weight: 600;
+    }
+  }
+
+  .CustomerReviewItem__Mess {
+    height: 158px;
+    line-height: 24px;
+    color: $color-grey-900;
+  }
+
+  .App-ActionRate {
+    display: block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .App-CustomerReviewItem {
+    width: 340px;
+  }
+}

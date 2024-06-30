@@ -1,0 +1,228 @@
+.App-DashBoard {
+  .image-gallery-bullets {
+    z-index: 1;
+  }
+
+  .image-gallery-bullets .image-gallery-bullet {
+    background-color: white;
+
+    &.active {
+      width: 24px;
+      background-color: $color-500;
+      border-radius: 8px;
+      border: none;
+    }
+  }
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    //width: 100vw;
+    height: 400px;
+    object-fit: fill;
+  }
+  .DashBoard__Container--Input {
+    padding: 0 100px 24px 100px;
+  }
+  .DashBoard__Container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 48px 280px;
+
+    .wmde-markdown {
+      background-color: transparent;
+    }
+
+    &.Background {
+      background-color: $color-50;
+    }
+
+    &.Area {
+      padding: 48px 200px;
+    }
+
+    &.CustomerReviews {
+      display: flex;
+      justify-content: center;
+      padding: 48px 40px;
+      background-color: $color-50;
+
+      .DashBoard__Item {
+        padding: 16px;
+        display: flex;
+        gap: 32px;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar {
+          background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &.NewReview {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 600px;
+      }
+    }
+  }
+
+  .DashBoard__Type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .DashBoard__TypeItem {
+    display: flex;
+    gap: 8px;
+  }
+
+  .DashBoard__TypeItem--Info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 0;
+
+    > div {
+      &:nth-child(1) {
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .DashBoard__Area {
+    display: flex;
+    gap: 16px;
+  }
+
+  .DashBoard__Area--Image {
+    position: relative;
+    width: 33.33333%;
+
+    > div {
+      color: white;
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+  }
+
+  .DashBoard__Title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 16px;
+
+    div {
+      padding-right: 8px;
+      padding-bottom: 4px;
+      display: inline;
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-bottom: 3px solid $color-500;
+      text-align: center;
+    }
+  }
+
+  .App-PostItem {
+    background-color: white;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-DashBoard {
+    .image-gallery-content .image-gallery-slide .image-gallery-image {
+      height: 200px;
+    }
+
+    .DashBoard__Container--Input {
+      padding: 0 0 24px 0;
+    }
+
+    .DashBoard__Container {
+      padding: 48px 12px;
+      &.Area {
+        padding: 48px 12px;
+      }
+      &.CustomerReviews {
+        padding: 48px 0;
+      }
+      &.NewReview {
+        img {
+          width: 340px;
+        }
+      }
+    }
+
+    .DashBoard__Type {
+      align-items: start;
+      gap: 0;
+      justify-content: space-between;
+      width: calc(100vw - 8px);
+      margin-left: -8px;
+    }
+    .DashBoard__TypeItem {
+      flex-direction: column;
+      align-items: center;
+    }
+    .DashBoard__TypeItem--Info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4px 0;
+
+      > div {
+        text-align: center;
+        &:nth-child(1) {
+          font-size: 14px;
+        }
+        &:nth-child(2) {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .DashBoard__Area {
+      flex-direction: column;
+    }
+
+    .DashBoard__Area--Image {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+  .App-DashBoard {
+    .DashBoard__Container {
+      &.Search {
+        padding: 48px 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .App-DashBoard {
+    .DashBoard__Container {
+      &.Search {
+        padding: 48px 24px;
+      }
+    }
+  }
+}

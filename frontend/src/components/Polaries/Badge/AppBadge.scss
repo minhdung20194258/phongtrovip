@@ -1,0 +1,65 @@
+.App-Badge {
+  padding: 4px 12px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 24px;
+  cursor: default;
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  &.nowrap {
+    white-space: nowrap;
+  }
+
+  &.App-Badge--Error {
+    font-size: 15px;
+    background-color: rgba(255, 226, 226, 0.966);
+    color: rgb(236, 0, 0);
+    padding: 12px;
+  }
+
+  &.App-Badge--Info {
+    background-color: $color-100;
+    color: $color-700;
+  }
+  &.App-Badge--InfoBold {
+    background-color: $color-500;
+    color: white;
+  }
+  &.App-Badge--Success {
+    color: $color-success;
+    background-color: #ccffe3;
+  }
+  &.App-Badge--Disabled {
+    background-color: $color-grey-300;
+  }
+
+  &.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.sm {
+    padding: 2px 6px;
+    height: 20px;
+    font-size: 11px;
+  }
+
+  &.md {
+    padding: 12px 16px;
+    height: 36px;
+  }
+
+  &.lg {
+    padding: 16px 24px;
+    min-height: 48px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,65 @@
+.App-Plans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.App-PlansModal {
+    padding-top: 0;
+    max-width: 1000px;
+
+    .Plans__Info {
+      width: 100%;
+    }
+    .Plans__PaymentBtn {
+      width: 100%;
+    }
+  }
+
+  .Plans__Introduce {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .Plans__Info {
+    margin-top: 48px;
+    display: flex;
+    width: 54%;
+    gap: 24px;
+  }
+
+  .Plans__Info--Item {
+    display: flex;
+    flex-direction: column;
+    width: 33.333333333%;
+    justify-content: space-between;
+  }
+
+  .Plans__PaymentBtn {
+    width: 54%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-Plans {
+    .Plans__Info {
+      width: 100%;
+      padding-bottom: 12px;
+      overflow-x: auto;
+    }
+    .Plans__Info--Item {
+      box-shadow: none;
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .Plans__PaymentBtn {
+      width: 100%;
+    }
+  }
+}

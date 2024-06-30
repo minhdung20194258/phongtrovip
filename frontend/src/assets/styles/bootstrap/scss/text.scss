@@ -1,0 +1,43 @@
+.txt-c {
+  text-align: center;
+}
+.txt-e {
+  text-align: end;
+}
+.txt-up {
+  text-transform: uppercase;
+}
+.txt-low {
+  text-transform: lowercase;
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+@for $i from 1 through 9 {
+  .fw-#{$i * 100} {
+    font-weight: #{$i * 100} !important;
+  }
+}
+@for $i from 1 through 10 {
+  .max-line-#{$i} {
+    overflow: hidden;
+    -webkit-line-clamp: #{$i};
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+  }
+}
+@for $size from 10 through 50 {
+  .h-txt-#{$size} {
+    font-size: #{$size}px;
+    font-weight: 500;
+  }
+}
+@for $i from 7 through 100 {
+  .fs-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}

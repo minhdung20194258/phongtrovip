@@ -1,0 +1,61 @@
+.App-User__Profile {
+  align-items: center;
+  min-height: 400px;
+  width: 700px;
+  min-width: 700px;
+
+  .user__avatar {
+    --avatar-size: 140px;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    background-size: var(--avatar-size) var(--avatar-size);
+    border-radius: 50%;
+    position: relative;
+    border: 1px solid $color-border;
+    box-shadow: rgba(149, 157, 165, 0.4) 0 8px 24px;
+
+    input {
+      display: none;
+    }
+
+    .User__Avatar--Action {
+      position: absolute;
+      cursor: pointer;
+      bottom: 0;
+      right: 0;
+      background-color: white;
+      border: 2px solid black;
+      box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+      height: 38px;
+      width: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+  }
+  .user__fullname {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-User__Profile {
+    align-items: center;
+    width: 100%;
+    min-width: 100%;
+
+    .user__avatar {
+      --avatar-size: 100px;
+
+      .User__Avatar--Action {
+      }
+    }
+    .user__fullname {
+    }
+  }
+}

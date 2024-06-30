@@ -1,0 +1,45 @@
+.App-AdminSidebar {
+  width: 300px;
+  height: calc(100vh - $height-navbar-view);
+  flex-shrink: 0;
+  box-shadow: none;
+  border-radius: 0;
+  padding-top: 32px;
+}
+
+.AdminSidebar__User {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+
+  .AdminSidebar__User--Avatar {
+    width: 64px;
+    height: 64px;
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .AdminSidebar__User--FullName {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 0;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 16px;
+
+    > .role {
+      background-color: orange;
+      color: white;
+      border-radius: 8px;
+      padding: 4px 8px;
+
+      &.admin {
+        background-color: $color-red-500;
+      }
+    }
+  }
+}

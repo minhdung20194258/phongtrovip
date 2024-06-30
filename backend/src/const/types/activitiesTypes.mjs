@@ -1,0 +1,13 @@
+export const ACTIVITY_RECHARGE = 'activity_recharge';
+export const ACTIVITY_RECHARGE_DEPOSIT = 'activity_recharge_deposit';
+export const ACTIVITY_RECHARGE_WAITING = 'activity_recharge_waiting';
+export const ACTIVITY_RECHARGE_ERROR = 'activity_recharge_error';
+export const ACTIVITY_PAY_POST = 'activity_pay_post';
+export const ACTIVITY_AUTO_PAY_POST = 'activity_auto_pay_post';
+export const ACTIVITY_STAFF_EDIT_USER = 'activity_staff_edit_user';
+export const ACTIVITY_STAFF_CREATE_USER = 'activity_staff_create_user';
+export const ACTIVITY_STAFF_ACCEPT_POST = 'activity_staff_accept_post';
+export const ACTIVITY_REJECT_DEPOSIT_OWNER = 'activity_refund_user_create';
+export const ACTIVITY_REJECT_DEPOSIT_CUSTOMER = 'activity_refund_user_receive';
+export const ACTIVITY_STAFF_ACCEPT_PAYMENT = 'activity_staff_accept_payment';
+export const ACTIVITY_AUTO_REFUND_DEPOSIT_OWNER = 'activity_refund_deposit_receiver';

@@ -1,0 +1,108 @@
+.toast {
+  position: fixed;
+  top: 4px;
+  right: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  display: flex;
+  width: 450px;
+  min-height: 56px;
+  padding: 0 16px 0 16px;
+  box-shadow: rgba(0, 0, 0, 0.078) 0px 8px 24px;
+  background-color: #fff;
+  border-radius: 6px;
+  animation: slideIn 0.5s ease-in-out forwards;
+  gap: 8px;
+
+  .toast-left {
+    width: 24px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 28px;
+    }
+  }
+
+  .toast-center {
+    padding: 20px 6px;
+    flex: 1;
+
+    span:nth-child(1) {
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 8px;
+    }
+  }
+
+  .toast-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    svg {
+      cursor: pointer;
+      font-size: 16px;
+      padding: 8px;
+
+      &:hover {
+        color: $color-grey-700;
+      }
+
+      &:active {
+        color: black;
+      }
+    }
+  }
+}
+
+.toast--success {
+  .toast-left svg,
+  .toast-center span:nth-child(1) {
+    color: $color-success;
+  }
+}
+
+.toast--error {
+  .toast-left svg,
+  .toast-center span:nth-child(1) {
+    color: $color-error;
+  }
+}
+
+.toast--warning {
+  .toast-left svg,
+  .toast-center span:nth-child(1) {
+    color: $color-warning;
+  }
+}
+
+.toast--info {
+  .toast-left svg,
+  .toast-center span:nth-child(1) {
+    color: $color-help;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .toast {
+    width: unset;
+    min-height: unset;
+    top: 0;
+
+    .toast-center {
+      padding: 12px 6px;
+    }
+  }
+}

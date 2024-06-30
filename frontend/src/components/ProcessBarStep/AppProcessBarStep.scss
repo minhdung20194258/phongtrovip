@@ -1,0 +1,30 @@
+.App-ProcessBarStep__Message {
+  position: absolute;
+  top: 100%;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  text-align: center;
+}
+
+.App-ProcessBarStep__Process {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+
+  .process-bar {
+    transition: 0.4s linear;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-ProcessBarStep__Process {
+    width: 60px;
+  }
+  .App-ProcessBarStep__Message {
+    width: 110px;
+  }
+}

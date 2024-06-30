@@ -1,0 +1,116 @@
+.App-Combobox {
+  min-width: 80px;
+  width: 100%;
+  position: relative;
+
+  .App-Combobox__SelectOptions input {
+    caret-color: transparent;
+    cursor: pointer;
+  }
+
+  &.lg {
+    &.combobox-top {
+      bottom: calc($height-item-lg + 24px);
+    }
+    &:not(:has(label)) {
+      .combobox-content {
+        top: $height-item-lg;
+      }
+    }
+    .combobox-content {
+      top: $height-item-lg + 19px + 8px + 2px;
+    }
+  }
+
+  &.sm {
+    &.combobox-top {
+      bottom: calc($height-item-sm + 24px);
+    }
+    &:not(:has(label)) {
+      .combobox-content {
+        top: $height-item-sm;
+      }
+    }
+    .combobox-content {
+      top: $height-item-sm + 19px + 8px + 2px;
+    }
+  }
+
+  &.combobox-top {
+    top: unset;
+    bottom: calc($height-item + 24px);
+  }
+
+  &:not(:has(label)) {
+    .combobox-content {
+      top: $height-item;
+    }
+  }
+  .text--search {
+    background-color: $color-200;
+  }
+  .combobox-content {
+    min-height: 52px;
+    //min-width: 300px;
+    box-sizing: border-box;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    border-left: rgba(149, 157, 165, 0.2) 1px solid;
+    width: 100%;
+    border-radius: 6px;
+    background-color: #ffffff;
+
+    position: absolute;
+    top: $height-item + 19px + 8px + 2px;
+    padding: 8px;
+    z-index: $zIndex-comboboxContent;
+    display: block;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      max-height: 232px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $color-grey-500;
+      }
+
+      li {
+        height: $height-item;
+        padding: 0 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 6px;
+        cursor: pointer;
+        position: relative;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+
+        &:hover {
+          background-color: $color-50;
+        }
+        &.item--checked {
+          background-color: $color-100;
+          > svg {
+            padding-left: 8px;
+          }
+        }
+        &.item--keydown {
+          background-color: $color-100;
+          border: $color-700 solid 1px;
+        }
+        &.item--placeholder {
+          justify-content: flex-start;
+          font-size: 14px;
+          height: 44px;
+        }
+      }
+    }
+  }
+}

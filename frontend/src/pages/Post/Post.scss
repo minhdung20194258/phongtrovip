@@ -1,0 +1,66 @@
+.App-PostItem,
+.App-PostItemDetail {
+  background-color: white;
+
+  .btn.btn--no-text-3 {
+    + .count {
+      background-color: $color-900;
+      color: white;
+    }
+    &.active,
+    &:hover {
+      background-color: $color-grey-200;
+      border-radius: 50%;
+    }
+
+    &.love {
+      &.active {
+        color: $color-red-500;
+      }
+      &:hover:not(:disabled) {
+        color: $color-red-500;
+      }
+    }
+
+    &.dislike {
+      svg {
+        margin-top: 2px;
+      }
+      &:hover {
+        color: $color-700;
+      }
+      &.active {
+        background-color: $color-grey-200;
+        color: $color-500;
+      }
+    }
+    &.save {
+      &:hover {
+        color: black;
+      }
+      &.active {
+        background-color: $color-grey-500;
+        color: white;
+      }
+    }
+  }
+}
+
+.PostBtnReact {
+  position: relative;
+
+  .count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    font-weight: 700;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  }
+}

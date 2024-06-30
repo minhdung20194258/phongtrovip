@@ -1,0 +1,23 @@
+.crop-image .modal-content__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crop-image__container {
+  border-radius: 8px;
+  background-color: $color-bg;
+  max-height: 500px;
+  padding: 24px;
+  position: relative;
+  max-width: 700px;
+}
+
+.cropper-view-box {
+  outline: 0;
+  box-shadow: 0 0 0 1px #39f;
+}
+
+.preview-img {
+  max-width: 50%;
+}

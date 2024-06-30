@@ -1,0 +1,87 @@
+.App-UserPublic {
+  display: flex;
+  padding: 36px 360px;
+  gap: 48px;
+}
+
+.App-UserPublicCard {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  .UserEvaluate {
+    width: 380px;
+    height: 256px;
+    padding: 32px 24px;
+    display: flex;
+    justify-content: space-between;
+
+    .UserEvaluate__Preview {
+      width: 210px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      .name {
+        font-size: 32px;
+        line-height: 44px;
+        letter-spacing: 0;
+        font-weight: 700;
+        text-align: center;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      img {
+        width: 104px;
+        height: 104px;
+        border-radius: 50%;
+      }
+    }
+
+    .UserEvaluate__Info {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 96px;
+    }
+
+    .Preview__Img {
+      position: relative;
+
+      svg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        background-color: white;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .UserVerify {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.UserReport {
+  .App-Modal,
+  .modal-content {
+    min-height: 0;
+    min-width: 0;
+  }
+}
+
+.App-UserPublicContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

@@ -1,0 +1,28 @@
+.App-User {
+  display: flex;
+  gap: 48px;
+
+  .User__SideBar {
+    margin-left: 240px;
+  }
+
+  .User__Outlet {
+    margin-right: 120px;
+    width: 70%;
+
+    .App-Card {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-User {
+    gap: 0;
+    .User__Outlet {
+      max-width: 100%;
+      min-width: 100%;
+      width: 100%;
+    }
+  }
+}

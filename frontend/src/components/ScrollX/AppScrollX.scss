@@ -1,0 +1,50 @@
+.App-ScrollX {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  .ScrollX__Items {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    padding: 4px;
+
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      height: 0;
+      width: 0;
+      background-color: transparent;
+    }
+  }
+
+  .ScrollX__Item--Container {
+    &.active {
+      outline: 1px solid $color-500;
+      border-radius: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-ScrollX {
+    gap: 0;
+
+    .ScrollX__Items {
+      gap: 12px;
+      padding: 0;
+    }
+    .ScrollX__Item--Container {
+      &.active {
+        outline: 0;
+      }
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

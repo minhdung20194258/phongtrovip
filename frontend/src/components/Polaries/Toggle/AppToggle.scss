@@ -1,0 +1,82 @@
+.App-Toggle {
+  &:has(.App-Toggle__Label) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &:has(.App-Toggle__Loading) .slider::before {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .App-Toggle__Label {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .App-Toggle__Loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+  }
+}
+
+.toggle {
+  position: relative;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  background-color: $color-grey-500;
+  transition: 0.4s;
+  width: 60px;
+  height: $height-item;
+  border-radius: 6px;
+}
+
+.slider:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  transition: 0.4s;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+}
+
+input:checked + .slider {
+  background-color: $color-500;
+}
+
+input:checked + .slider:before {
+  transform: translateY(-50%) translateX(24px);
+}
+
+.toggle.md {
+  .slider {
+    width: 48px;
+    height: 28px;
+  }
+
+  .slider:before {
+    height: 20px;
+    width: 20px;
+    left: 4px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateY(-50%) translateX(20px);
+  }
+}

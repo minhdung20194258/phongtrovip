@@ -1,0 +1,126 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  min-width: 680px;
+  overflow: auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog {
+  position: absolute;
+  background-color: $color-bg;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: auto;
+  width: 520px;
+  max-height: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.dialog--success {
+    .body-icon > svg {
+      color: $color-success;
+    }
+  }
+
+  &.dialog--warning {
+    .body-icon > svg {
+      color: $color-warning;
+    }
+  }
+
+  &.dialog--help {
+    .body-icon > svg {
+      color: $color-help;
+    }
+  }
+  &.dialog--info {
+    .body-icon > svg {
+      color: $color-help;
+    }
+  }
+
+  .dialog-header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background-color: $color-bg;
+    z-index: 10;
+
+    > p {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  .dialog-body {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 24px 24px 24px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .body-icon {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > svg {
+        font-size: 48px;
+      }
+      + .body-text {
+        margin-left: 12px;
+      }
+    }
+
+    .body-text {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  .dialog-footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 6px;
+    margin: 0 24px 24px 24px;
+    height: 40px;
+  }
+}

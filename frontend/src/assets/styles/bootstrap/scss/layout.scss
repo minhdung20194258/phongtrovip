@@ -1,0 +1,198 @@
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-wrap: wrap;
+  }
+}
+.opacity-0 {
+  opacity: 0 !important;
+}
+
+.w-full {
+  width: 100%;
+}
+.h-full {
+  height: 100%;
+}
+.row {
+  display: flex;
+  width: 100% !important;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  height: 100% !important;
+}
+.jc-sb {
+  justify-content: space-between !important;
+}
+.jc-c {
+  justify-content: center !important;
+}
+.jc-fe {
+  justify-content: flex-end !important;
+}
+.jc-fs {
+  justify-content: flex-start !important;
+}
+.jc-e {
+  justify-content: end !important;
+}
+.jc-s {
+  justify-content: start !important;
+}
+.ai-c {
+  align-items: center !important;
+}
+.ai-fs {
+  align-items: flex-start !important;
+}
+.ai-fe {
+  align-items: flex-end !important;
+}
+.ai-s {
+  align-items: start !important;
+}
+.ai-e {
+  align-items: end !important;
+}
+.d-flex {
+  display: flex;
+}
+.d-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.d-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.d-unset {
+  display: unset;
+}
+.d-none {
+  display: none;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.bd {
+  border: 1px solid $color-border;
+}
+.bd-t {
+  border-top: 1px solid $color-border;
+}
+.bd-b {
+  border-bottom: 1px solid $color-border;
+}
+.bd-r {
+  border-right: 1px solid $color-border;
+}
+.bd-l {
+  border-left: 1px solid $color-border;
+}
+.bd-none {
+  border: 0;
+}
+.bd-t-none {
+  border-top: 0;
+}
+.bd-b-none {
+  border-bottom: 0;
+}
+.bd-r-none {
+  border-right: 0;
+}
+.bd-l-none {
+  border-left: 0;
+}
+.bsz-bdb {
+  box-sizing: border-box;
+}
+.bsd {
+  box-shadow:
+    rgba(0, 0, 0, 0.075) 0 1px 1px inset,
+    $color-300 0 0 6px;
+}
+@for $i from 1 through 25 {
+  .bdr-#{$i} {
+    border-radius: #{$i}px;
+  }
+}
+@for $i from 1 through 100 {
+  .circle-#{$i} {
+    border-radius: 50%;
+    width: #{$i}px;
+    height: #{$i}px;
+    min-width: #{$i}px;
+    min-height: #{$i}px;
+  }
+}
+@for $i from 1 through 25 {
+  .flex-#{$i} {
+    flex: #{$i} !important;
+  }
+}
+$layout: (
+  'w': 'width',
+  'h': 'height',
+  'm': 'margin',
+  'mt': 'margin-top',
+  'mr': 'margin-right',
+  'mb': 'margin-bottom',
+  'ml': 'margin-left',
+  'p': 'padding',
+  'pt': 'padding-top',
+  'pr': 'padding-right',
+  'pb': 'padding-bottom',
+  'pl': 'padding-left',
+  'gap': 'gap',
+  'row-gap': 'row-gap',
+  'col-gap': 'column-gap',
+);
+
+@each $key, $value in $layout {
+  @for $i from 1 through 10 {
+    .#{$key}-#{$i} {
+      #{$value}: #{$i}px !important;
+    }
+  }
+  @for $i from 3 through 25 {
+    .#{$key}-#{$i * 4} {
+      #{$value}: #{$i * 4}px !important;
+    }
+  }
+  @for $i from 10 through 100 {
+    .#{$key}-#{$i * 10} {
+      #{$value}: #{$i * 10}px !important;
+    }
+  }
+}
+
+@for $i from 1 through 25 {
+  .row-#{$i} {
+    height: #{calc(100 / $i)}#{'%'} !important;
+  }
+  .col-#{$i} {
+    width: #{calc(100 / $i)}#{'%'} !important;
+  }
+
+  // row-3p4 = row 75%
+  @for $j from 1 through $i {
+    .row-#{$j}p#{$i} {
+      height: #{calc($j * 100 / $i)}#{'%'} !important;
+    }
+    .col-#{$j}p#{$i} {
+      width: #{calc($j * 100 / $i)}#{'%'} !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col-1p3 {
+    width: 100% !important;
+  }
+}

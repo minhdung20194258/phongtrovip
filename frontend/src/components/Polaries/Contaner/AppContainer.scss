@@ -1,0 +1,42 @@
+.App-Container {
+  --padding-inline: 0px;
+  --padding-block: 32px;
+
+  box-sizing: border-box;
+  position: relative;
+  padding: var(--padding-block) var(--padding-inline);
+
+  &:has(.Container__Header) {
+    padding-top: 0;
+
+    .Container__Header {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: end;
+      padding: var(--padding-block) 0 16px 0;
+      background-color: white;
+      z-index: 1;
+
+      &:has(.Container__Header--Text) {
+        justify-content: space-between;
+      }
+    }
+    .Container__Header--Text {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .Container__Header--Button {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .App-Container {
+    --padding-inline: 8px;
+    --padding-block: 16px;
+  }
+}
